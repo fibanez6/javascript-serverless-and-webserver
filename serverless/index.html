@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet web</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Fernando Ibanez">
+    <meta name="description" content="The goal of this project is to have a single-page application that displays and manages a list of animals.">
+    <link rel="stylesheet" href="stylesheets/semantic.min.css"/>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <h1 class="ui center aligned header">Pet web</h1>
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="four wide column">
+                <div class="top attached ui item menu">
+                    <a id="global-button" class="active item">Global List</a>
+                </div>
+                <div class="bottom attached ui item menu">
+                    <a id="specific-button" class="item">Specific List</a>
+                </div>
+            </div>
+            <div id="main-panel" class="twelve wide column"></div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="scripts/libs/lodash.min.js" async></script>
+    <script src="scripts/storage/index.js" async></script>
+
+    <!--
+    The exercise specifies  that we cannot use a  server,  therefore
+    it is not possible to use modules because the CROS does not pass
+    for the file:// protocol
+    -->
+    <script src="scripts/actions.js" async></script>
+    <script src="scripts/constants.js" async></script>
+    <script src="scripts/api/data.js" async></script>
+    <script src="scripts/api/index.js" async></script>
+
+    <script src="scripts/components/GlobalFamilyPanel.js" async></script>
+    <script src="scripts/components/GlobalFamilyList.js" async></script>
+    <script src="scripts/components/AnimalForm.js" async></script>
+    <script src="scripts/components/SpecificFamilyPanel.js" async></script>
+    <script src="scripts/index.js" defer></script>
+
+</footer>
+
+</html>
